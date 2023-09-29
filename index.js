@@ -21,11 +21,11 @@ function addMovie(event) {
 let form = document.querySelector('form');
 form.addEventListener('submit', addMovie);
 
-let span = target.parentNode.querySelector('span');
+
 
 function deleteMovie(event) {
+    message.textContent = `${event.target.previousSibling.textContent} Deleted!`;
     event.target.parentNode.remove();
-    message.textContent = `${span.textContent} Deleted!`;
     revealMessage();
 }
 
